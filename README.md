@@ -1,4 +1,5 @@
-# JONATHAN
+Unidad 1 – Etapa 1 - Reconocimiento de nuestro
+entorno y Armado de equipos con SCV”# JONATHAN
 Prototipo de Gameplay: Prueba la mecánica principal (ej. el salto, combate, movimiento,
 <img width="616" height="353" alt="image" src="https://github.com/user-attachments/assets/ee176d7a-9d96-49a1-8984-969fafcbb4eb" />
 <img width="602" height="351" alt="image" src="https://github.com/user-attachments/assets/a1ea3bef-080f-40d3-bca5-8c574970c86d" />
