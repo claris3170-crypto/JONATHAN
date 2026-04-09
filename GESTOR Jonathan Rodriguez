@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    // Componentes
+    private Rigidbody2D rb;
+    private Animator anim;
+    private AudioSource audioSource;
+
+    [Header("Ajustes")]
+    public float speed = 5f;
+    public AudioClip jumpSound;
+
+    void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void Update() {
+        float move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(move * speed, rb.velocity.y);
+
+        // --- Integración Gráfica ---
+        anim.SetFloat("Speed", Mathf.Abs(move));
+
+        // --- Integración Sonora ---
+        if (Input.GetButtonDown("Jump")) {
+            rb.AddForce(Vector2.up * 7f, ForceMode2D.Impulse);
+            audioSource.PlayOneShot(jumpSound);
+        }
+    }
+}
